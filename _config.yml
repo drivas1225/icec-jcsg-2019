@@ -3,7 +3,8 @@ title: icec-jcsg
 email: icec.jcsg.2019@gmail.com 
 author:
 description:
-url: cs.ucsp.edu.pe/icec-jcsg-2019/
+url: cs.ucsp.edu.pe
+baseurl: /icec-jcsg-2019
 
 # Build settings
 permalink: :title/
