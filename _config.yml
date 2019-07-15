@@ -1,0 +1,16 @@
+# Site settings
+title: icec-jcsg
+email: icec.jcsg.2019@gmail.com 
+author:
+description:
+url: cs.ucsp.edu.pe/icec-jcsg-2019/
+
+# Build settings
+permalink: :title/
+sass:
+  sass_dir: css
+
+# Social icons
+show_social_icons: true
+github_username: drivas1225/icec-jcsg-2019
+facebook_username: ucatolicasanpablo

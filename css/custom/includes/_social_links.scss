@@ -1,0 +1,47 @@
+.social-links {
+    a {
+      text-decoration: none;
+      padding-right: 10px;
+  
+      &:hover {
+        color: $info;
+        cursor: pointer;
+      }
+    }
+  }
+
+  img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+  }
+
+  .cs-alert-info {
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    color: #31708f;
+}
+
+.cs-alert, .ninja-forms-field-error, .ninja-forms-success-msg, .ninja-forms-error-msg, .wpcf7-response-output, .wpcf7-not-valid-tip {
+    position: relative;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
