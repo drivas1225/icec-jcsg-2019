@@ -14,15 +14,13 @@ try {
       array(
         "amount" => 300,
         "currency_code" => "PEN",
-        "email" => "adelgado112233@culqi.com",
+        "email" => $_POST["email"],
         "source_id" => $_POST["token"] ,
         "antifraud_details" => array(
-            "address" =>"Av. Lima 1234",
-            "address_city"=> "Lima",
-            "country_code" => "PE",
-            "first_name" => "Jose",
-            "last_name" => "Martinez",
-            "phone_number" => 123456789
+            "address" =>$_POST["address"],
+            "first_name" => $_POST["firstName"],
+            "last_name" => $_POST["lastName"],
+
           )
       )
 

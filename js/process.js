@@ -1,13 +1,16 @@
 function culqi() {
+    alert("Procesando pago, por favor espere.");
+    console.log("inicio");
     if (Culqi.token) { // ¡Objeto Token creado exitosamente!
+      console.log("token creado");
       $(document).ajaxStart(function(){
         run_waitMe();
       });
       var token = Culqi.token.id;
       $.ajax({
                type: 'POST',
-               url: './php/createCharge.php',
-               data: { token: Culqi.token.id },
+               url: '../php/createCharge.php',
+               data: { token: Culqi.token.id, firstName: $('#firstName').val(), lastName: $('#lastName').val(), email:$('#email').val(), address:$('#address').val()},
                datatype: 'json',
                success: function(data) {
                  var result = "";
@@ -34,6 +37,7 @@ function culqi() {
                }
             });
         } else {
+          console.log("error");
           alert(Culqi.error.merchant_message);
         }
 
@@ -41,10 +45,4 @@ function culqi() {
 
   function run_waitMe(){
   console.log("Procesando pago");
-}
-
-function resultdiv(message){
-  $('#response-panel').show();
-  $('#response').html(message);
-  $('body').waitMe('hide');
 }
