@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: form
 ---
 
 <div class="row">
@@ -42,7 +42,6 @@ layout: default
           <strong>$20</strong>
         </li>
       </ul>
-
       <form class="card p-2">
         <div class="input-group">
           <input type="text" class="form-control" placeholder="Promo code">
@@ -75,7 +74,7 @@ layout: default
 
         <div class="mb-3">
           <label for="email">Email </span></label>
-          <input type="email" class="form-control" size="50" data-culqi="card[email]" id="card[email]" placeholder="you@example.com">
+          <input type="email" class="form-control" size="50" data-culqi="card[email]" id="email" placeholder="you@example.com">
           <div class="invalid-feedback">
             Please enter a valid email address for shipping updates.
           </div>
@@ -162,8 +161,9 @@ layout: default
         </div>
 
         <hr class="mb-4">
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+        <button class="btn btn-primary btn-lg btn-block" id="checkout" type="button">Continue to checkout</button>
         <!-- <button id="btn_pagar">Pagar</button> -->
       </form>
     </div>
   </div>
+

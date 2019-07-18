@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+    {% include banner.html %}
+
+    <section class="cs-section">
+        <div class="container">
+            {{ content }}
+        </div>
+
+
+    </section>
+
+    {% include footer.html %}
+  <script>
+    $("#checkout").on('click', function(e) {
+      Culqi.createToken();
+      e.preventDefault();
+    })
+  </script>
+  <script type="text/javascript" src="../js/process.js"></script>
+  </body>
+</html>
