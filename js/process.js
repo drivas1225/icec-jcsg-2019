@@ -1,6 +1,8 @@
 function culqi() {
-    alert("Procesando pago, por favor espere.");
+    alert("Procesando pago, por favor espere...");
     console.log("inicio");
+    console.log($('#firstName').val());
+    console.log("---");
     if (Culqi.token) { // ¡Objeto Token creado exitosamente!
       console.log("token creado");
       $(document).ajaxStart(function(){
