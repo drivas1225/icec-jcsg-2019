@@ -13,11 +13,27 @@
     </section>
 
     {% include footer.html %}
+  <!-- Incluye Culqi Checkout en tu sitio web-->
+  <script src="https://checkout.culqi.com/js/v3"></script>
   <script>
     $("#checkout").on('click', function(e) {
       Culqi.open();
       e.preventDefault();
     })
+  </script>
+  <script src="../js/dropdowns.js"></script>
+
+  <script>
+    // Configura tu llave pública
+    Culqi.publicKey = 'pk_test_86wVlyQpXhqCTsnu';
+    var t=document.getElementsByName("price")[0];
+    // Configura tu Culqi Checkout
+    Culqi.settings({
+        title: '',
+        currency: 'USD',
+        description: t.options[t.selectedIndex].text,
+        amount: t.value*100
+    });
   </script>
   <script type="text/javascript" src="../js/process.js"></script>
   </body>

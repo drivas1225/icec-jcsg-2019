@@ -148,42 +148,6 @@ layout: form
         </select>
 
 
-        <h4 class="mb-3">Payment</h4>
-
-        <div class="row">
-          <div class="col-md-6 mb-3">
-            <label for="card[number]">Credit card number</label>
-            <input type="text" class="form-control" size="20" data-culqi="card[number]" id="card[number]" placeholder="" required="">
-            <div class="invalid-feedback">
-              Credit card number is required
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-3 mb-3">
-            <label for="card[cvv]">CVV</label>
-            <input type="text" class="form-control" size="4" data-culqi="card[cvv]" id="card[cvv]" placeholder="" required="">
-            <div class="invalid-feedback">
-              Security code required
-            </div>
-          </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 mb-3">
-              <label for="card[exp_month]">Expiration (MM) </label>
-              <input type="text" class="form-control" size="2" data-culqi="card[exp_month]" id="card[exp_month]" placeholder="" required="">
-              <div class="invalid-feedback">
-                Expiration date required
-              </div>
-            </div>
-            <div class="col-md-3 mb-3">
-                <label for="card[exp_year]">Expiration (YYYY) </label>
-                <input type="text" class="form-control" size="4" data-culqi="card[exp_year]" id="card[exp_year]" placeholder="" required="">
-                <div class="invalid-feedback">
-                    Expiration date required
-                </div>
-            </div>
-        </div>
 
         <hr class="mb-4">
         <button class="btn btn-primary btn-lg btn-block" id="checkout" type="button">Continue to checkout</button>
@@ -191,21 +155,3 @@ layout: form
       </form>
     </div>
   </div>
-
-
-
-
-<script src="../js/dropdowns.js"></script>
-
-<script>
-  // Configura tu llave pública
-  Culqi.publicKey = 'pk_test_86wVlyQpXhqCTsnu';
-  var t=document.getElementsByName("price")[0];
-  // Configura tu Culqi Checkout
-  Culqi.settings({
-      title: '',
-      currency: 'USD',
-      description: t.options[t.selectedIndex].text,
-      amount: t.value*100
-  });
-</script>
