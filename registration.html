@@ -149,15 +149,13 @@ layout: default
   </table>
 </div>
 
-
-<button type="button" id="test" onclick="location.href='../form'"> Click </button>
     <!-- <div>
       <button type="button" id="buyButton"> Click! </button>
     </div> -->
   <script>
     var d=new Date();
-    var month = 11;
-    var day = 8;
+    var month = d.getMonth()+1;
+    var day = d.getDate();
     var output = d.getFullYear() + '/' + (month<10 ? '0' : '') + month + '/' + (day<10 ? '0' : '') + day;
     console.log(output);
     if((month==8 && day >=10) || month >=9)

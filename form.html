@@ -89,8 +89,7 @@ layout: form
         </div>
 
         <div class="mb-3">
-          <label for="address2" >Address 2 <span class="text-muted">(Optional)</span></label>
-          <input type="text" class="form-control" size="50" data-culqi="address2" id="address2" placeholder="Apartment or suite">
+          <input type="text" readonly id="country" />
         </div>
 
         <!-- <div class="row">
@@ -122,32 +121,18 @@ layout: form
             </div>
           </div>
         </div> -->
-
-        <select name="price">
-          <option disabled >All access</option>
-          <option value=0 id = "ALLPROFIF"  >Professional IFIP member - </option>
-          <option value=0 id = "ALLPROFNO"  >Professional non member - </option>
-          <option value=0 id = "ALLSTUDENTIF"  >Student IFIP Member - </option>
-          <option value=0 id = "ALLSTUDENTNO"  >Student non member - </option>
-          <option value=0 id = "ALLPROFPERU"  >Professional from Peru - </option>
-          <option value=0 id = "ALLSTUDENTPERU"  >Student form Peru - </option>
-          <option value=0 id = "" disabled >IFIP</option>
-          <option value=0 id = "IFIPPROFIF"  >Professional IFIP member - </option>
-          <option value=0 id = "IFIPPROFNO"  >Professional non member - </option>
-          <option value=0 id = "IFIPSTUDENTIF"  >Student IFIP Member - </option>
-          <option value=0 id = "IFIPSTUDENTNO"  >Student non member - </option>
-          <option value=0 id = "IFIPPROFPERU"  >Professional from Peru - </option>
-          <option value=0 id = "IFIPSTUDENTPERU"  >Student form Peru - </option>
-          <option value=0 id = "" disabled >COIDEV</option>
-          <option value=0 id = "COIDEVPROFIF"  >Professional IFIP member - </option>
-          <option value=0 id = "COIDEVPROFNO"  >Professional non member - </option>
-          <option value=0 id = "COIDEVSTUDENTIF"  >Student IFIP Member - </option>
-          <option value=0 id = "COIDEVSTUDENTNO"  >Student non member - </option>
-          <option value=0 id = "COIDEVPROFPERU"  >Professional from Peru - </option>
-          <option value=0 id = "COIDEVSTUDENTPERU"  >Student form Peru - </option>
-        </select>
-
-
+        <div class="radio">
+          <label><input type="radio" name="Conferences" value="ALL"> All access </label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="Conferences" value="IFIP"> IFIP </label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="Conferences" value="COIDEV"> COIDEV </label>
+        </div>
+        <div class="dropdown">
+          <select id="price" name="price"></select>
+        </div>
 
         <hr class="mb-4">
         <button class="btn btn-primary btn-lg btn-block" id="checkout" type="button">Continue to checkout</button>
